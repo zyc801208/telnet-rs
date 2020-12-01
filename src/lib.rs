@@ -86,6 +86,9 @@ pub struct Telnet {
     process_buffered_size: usize
 }
 
+unsafe impl Send for Telnet {}
+unsafe impl Sync for Telnet {}
+
 impl Telnet {
 
     ///
